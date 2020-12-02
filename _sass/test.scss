@@ -1,0 +1,289 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+$f-primary1: "Roboto", sans-serif;
+$f-secondary1: "Open Sans", sans-serif;
+$clr-primary: #678e3e;
+$clr-primary-3: hsl(42, 78%, 60%);
+$clr-primary-5: hsl(42, 78%, 60%);
+$clr-primary-light: #beed8c;
+$clr-grey-1: #102a42;
+$clr-grey-5: #617d98;
+$clr-grey-10: #f1f5f8;
+$clr-white: #fff;
+$ff-primary: "Catamaran", sans-serif;
+$ff-secondary: "Grand Hotel", cursive;
+$transition: all 0.3s linear;
+$spacing: 0.25rem;
+$radius: 0.5rem;
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    // background-color: #CBCBD4;
+    font-family: $f-secondary1;
+}
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: $clr-primary-3;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: $spacing;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: $f-primary1;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+}
+header{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/images/header.jpg") center/cover no-repeat fixed;
+        .top-menu li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: #656256;
+    padding-top: 2rem;
+}
+        a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #EE7B30;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+        @media only screen and (min-width: 600px){
+            .top-menu li{
+        flex-direction: row;
+    }
+}
+}
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(to left,$clr-primary,#e9b949,$clr-primary);
+}
+
+.movies{
+    .section-center {
+        padding: 4rem 0;
+        width: 90vw;
+        margin: 0 auto;
+}
+    .movies-card {
+        margin: 2rem 0;
+        background: $clr-grey-10;
+        border-radius: $radius;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: $transition;
+}
+    .movies-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+    .movies-img {
+        height: 25rem;
+        object-fit: cover;
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+}
+    .movies-info {
+        text-align: center;
+        padding: 1rem 1rem 2.5rem 1rem;
+}
+    .movies-info p {
+        max-width: 20rem;
+        color: $clr-grey-5;
+        margin: 0 auto;
+}
+    .movies-btn {
+        font-size: 0.75rem;
+        text-transform: capitalize;
+        padding: 1rem 0.5rem;
+        border-radius: $radius;
+        font-weight: 400;
+        margin-top: 1.25rem;
+}
+    @media screen and (min-width: 768px) {
+        .movies-card {
+            float: left;
+            width: 45%;
+            margin-right: 5%;
+  }
+}
+    @media screen and (min-width: 992px) {
+        .movies-card {
+            width: 30%;
+            margin-right: 3.333%;
+  }
+}
+}
+
+.section-title{
+    padding-top: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.timeline-center {
+        margin: 0 auto;
+        width: 80vw;
+        max-width: 40rem;
+        .timeline-item {
+            border-top: 2px dashed $clr-primary-5;
+            margin: 0;
+            padding: 4rem 2rem;
+            position: relative;
+}
+        .timeline p {
+            margin-bottom: 0;
+}
+        .timeline-item:nth-child(even) {
+            border-left: 2px dashed $clr-primary-5;
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+            margin-right: 2rem;
+            padding-right: 0;
+}
+        .timeline-item:nth-child(odd) {
+            border-right: 2px dashed $clr-primary-5;
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            margin-left: 2rem;
+            padding-left: 0;
+}
+        .timeline-item:first-child {
+            border-top: 0;
+            border-top-right-radius: 0;
+}
+        .timeline-item:last-child {
+            border-bottom-left-radius: 0;
+}
+        .number {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin-bottom: 0;
+            background: $clr-primary-5;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--clr-primary-1);
+            font-weight: bold;
+}
+        .timeline-item:nth-child(even) .number {
+            left: 0;
+}
+        .timeline-item:nth-child(odd) .number {
+            right: 0;
+            transform: translate(50%, -50%);
+}
+}
+
+
+.picturesss{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;   
+        .card{
+            min-height: 20rem;
+            width: 100%;
+            height: 100%;
+} 
+        .card img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 10px;
+}
+}
+
+
+
+.cast{
+     padding: 5rem 0;
+     width: 90vw;
+     margin: 0 auto;
+     max-width: 1170px;
+        .cast-title {
+            text-align: left;
+            margin-bottom: 2rem;
+}
+        .cast-title .underline {
+            margin-left: 0;
+}
+        .cast-center {
+            display: grid;
+            gap: 3rem 2rem;
+}
+        .cast-img {
+            justify-self: center;
+            max-width: 20rem;
+            max-height: 30rem;
+            border-radius: $radius;
+}
+        .cast-photo{
+            border-radius: $radius;
+        }
+        .cast-info{
+            margin-top: -3rem;
+        }
+        @media screen and (min-width: 992px) {
+            .cast-center {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cast-img {
+                position: relative;
+                border-radius: 15%;
+                &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 0.25rem solid $clr-primary-5;
+                top: 2rem;
+                right: -2rem;
+                left: -2rem;
+                border-radius: $radius;
+                z-index: -1;
+            }
+            }
+            .cast-info {
+                align-self: center;
+            }
+}
+}
+
+
+
+
+
+
+
